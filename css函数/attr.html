@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>attr()函数使用</title>
+
+    <style>
+        .info {
+            background-color: #acacac;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .info::after {
+            content: attr(data-type);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="unit" class="info" data-type="元">
+        <span>10</span>
+    </div>
+    <button onclick="swithType('元')">元</button>
+    <button onclick="swithType('角')">角</button>
+    <button onclick="swithType('分')">分</button>
+
+    <script type="text/javascript">
+        function swithType(text) {
+            var unitDiv = document.getElementById("unit");
+            unitDiv.setAttribute("data-type",text);
+        }
+    </script>
+</body>
+
+</html>
