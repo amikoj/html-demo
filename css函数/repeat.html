@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>repeat()函数使用 </title>
+<style>
+#container {
+  display: grid;
+  grid-template-columns: repeat(2, 50px 1fr) 100px;
+  grid-gap: 5px;
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  background-color: #8cffa0;
+  padding: 10px;
+}
+
+#container > div {
+  background-color: #8ca0ff;
+  padding: 5px;
+}
+</style>
+
+<body>
+<div id="container">
+  <div>
+    50px
+  </div>
+  <div>
+    flexible 宽度.
+  </div>
+  <div>
+    50px
+  </div>
+  <div>
+    flexible 宽度.
+  </div>
+  <div>
+    100px
+  </div>
+</div>
+</body>
+</html>
