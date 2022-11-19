@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通过blur设置图片高斯模糊</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            /* 1ch 等于一个 0 的宽度 */
+            /* 1ch = 1个英文 = 1个数字 */
+            /* 2ch = 1个中文 */
+            /* auto-fill;
+            如果容器大小不固定，项目大小固定，可以用auto-fill关键字自动填充； */
+            /* 列 自动填充列，每列为30个字符宽度 */
+            grid-template-columns: repeat(auto-fit, 30ch);
+            place-content: center;
+            /* 每个网格的间距为 5vh */
+            grid-gap: 5vh;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem;
+        }
+
+        #template {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 7px;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.13);
+            /* height: 25vh; */
+            /* 网格布局 */
+            display: grid;
+            /* grid-gap:20px 20px; */
+            /* row-gap和column-gap简写形式；行间距和列间距 */
+            grid-gap: 0.5rem;
+            width: 600px;
+        }
+
+        .col {
+            /* background-color: #7B86F5; */
+            background-color: #fff;
+            border-radius: 4px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+
+        }
+
+        .col span {
+            color: black;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+
+        .col img {
+            width: 160px;
+            height: 60px;
+        }
+
+        .template-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .img1 {
+            filter: blur(3px);
+        }
+
+        .img2 {
+            filter: blur(.3em);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="template" class="template-col">
+        <div class="col">
+            <img decoding="async" src="http://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <span>原图</span>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="http://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <span>模糊半径3px</span>
+        </div>
+        <div class="col">
+            <img class="img2" decoding="async" src="http://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <span>模糊半径0.3em</span>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
