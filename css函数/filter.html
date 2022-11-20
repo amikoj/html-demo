@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常见CSS滤镜函数</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+
+        #template {
+            display: inline-block;
+            border-radius: 7px;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.13);
+            padding: 15px 10px 8px;
+
+        }
+
+        #template .col {
+            display: inline-block;
+        }
+
+        #template .col img {
+            width: 168px;
+        }
+
+        #template .col>div {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .template-col-1 .img1 {
+            filter: brightness(0);
+        }
+
+        .template-col-1 .img2 {
+            filter: brightness(70%);
+        }
+
+        .template-col-2 .img1 {
+            filter: drop-shadow(10px 8px 2px #aeaeae);
+
+        }
+
+        .template-col-3 .img1 {
+            filter: grayscale(0);
+        }
+
+        .template-col-3 .img2 {
+            filter: grayscale(.7);
+        }
+
+        .template-col-3 .img3 {
+            filter: grayscale(100%);
+        }
+
+        .template-col-4 .img1 {
+            filter: hue-rotate(-90deg);
+        }
+
+        .template-col-4 .img2 {
+            filter: hue-rotate(0deg);
+        }
+
+        .template-col-4 .img3 {
+            filter: hue-rotate(90deg);
+        }
+
+        .template-col-4 .img4 {
+            filter: hue-rotate(.5turn);
+        }
+
+        .template-col-4 .img5 {
+            filter: hue-rotate(405deg);
+        }
+
+        .template-col-5 .img1 {
+            filter: invert(0);
+        }
+        .template-col-5 .img2 {
+            filter: invert(.6);
+        }
+        .template-col-5 .img3 {
+            filter: invert(100%);
+        }
+
+
+        .template-col-6 .img1 {
+            filter: opacity(0%);
+        }
+        .template-col-6 .img2 {
+            filter: opacity(50%);
+        }
+        .template-col-6 .img3 {
+            filter: opacity(100%);
+        }
+
+
+        .template-col-7 .img1 {
+            filter: saturate(0);
+        }
+        .template-col-7 .img2 {
+            filter: saturate(.4);
+        }
+        .template-col-7 .img3 {
+            filter: saturate(100%);
+        }
+        .template-col-7 .img4 {
+            filter: saturate(200%);
+        }
+
+
+        .template-col-8 .img1 {
+            filter: sepia(0);
+        }
+        .template-col-8 .img2 {
+            filter: sepia(.65);
+        }
+        .template-col-8 .img3 {
+            filter: sepia(100%);
+        }
+
+
+
+        .template-col-9 .img1 {
+            filter: contrast(0);
+        }
+        .template-col-9 .img2 {
+            filter: contrast(65%);
+        }
+        .template-col-9 .img3 {
+            filter: contrast(1);
+        }
+        .template-col-9 .img4 {
+            filter: contrast(200%);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>brightness函数:</h3>
+    <div id="template" class="template-col template-col-1">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>亮度0</div>
+        </div>
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>亮度70%</div>
+        </div>
+    </div>
+
+
+    <h3>drop-shadow函数:</h3>
+    <div id="template" class="template-col template-col-2">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>设置阴影</div>
+        </div>
+
+    </div>
+
+
+    <h3>grayscale函数:</h3>
+    <div id="template" class="template-col template-col-3">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>灰度0</div>
+        </div>
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>灰度70%</div>
+        </div>
+        <div class="col">
+            <img class="img3" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>灰度最大</div>
+        </div>
+    </div>
+
+
+    <h3>hue-rotate函数:</h3>
+    <div id="template" class="template-col template-col-4">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>-90deg</div>
+        </div>
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>0deg</div>
+        </div>
+        <div class="col">
+            <img class="img3" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>90deg</div>
+        </div>
+        <div class="col">
+            <img class="img4" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>.5turn</div>
+        </div>
+        <div class="col">
+            <img class="img5" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>405deg</div>
+        </div>
+
+    </div>
+
+
+    <h3>invert函数:</h3>
+    <div id="template" class="template-col template-col-5">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>0反转</div>
+        </div>
+
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>60%反转</div>
+        </div>
+
+        <div class="col">
+            <img class="img3" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>100%反转</div>
+        </div>
+    </div>
+
+
+    <h3>opacity函数:</h3>
+    <div id="template" class="template-col template-col-6">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>全透明</div>
+        </div>
+
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>50%透明</div>
+        </div>
+
+        <div class="col">
+            <img class="img3" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>100%透明</div>
+        </div>
+    </div>
+
+
+    <h3>saturate函数:</h3>
+    <div id="template" class="template-col template-col-7">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>完全不饱和</div>
+        </div>
+
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>  40% 饱和</div>
+        </div>
+
+        <div class="col">
+            <img class="img3" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>没有效果</div>
+        </div>
+
+        <div class="col">
+            <img class="img4" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>双饱和</div>
+        </div>
+    </div>
+
+
+    <h3>sepia函数:</h3>
+    <div id="template" class="template-col template-col-8">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>无影响</div>
+        </div>
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>65%棕色</div>
+        </div>
+        <div class="col">
+            <img class="img3" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>全棕</div>
+        </div>
+    </div>
+
+
+    <h3>contrast函数:</h3>
+    <div id="template" class="template-col template-col-9">
+        <div class="col">
+            <img decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>原图</div>
+        </div>
+        <div class="col">
+            <img class="img1" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>全灰</div>
+        </div>
+        <div class="col">
+            <img class="img2" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>65%对比度</div>
+        </div>
+        <div class="col">
+            <img class="img3" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>无影响</div>
+        </div>
+        <div class="col">
+            <img class="img4" decoding="async" src="https://www.enjoytoday.cn/wp-content/uploads/2022/10/image-111.png"
+                alt="Smiley face">
+            <div>双倍对比度</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
