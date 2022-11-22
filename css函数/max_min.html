@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>max、min、clamp函数使用示例</title>
+    <style>
+        html,
+        body {
+            font-size: 14px;
+        }
+
+        .container {
+            font-size: 20px;
+        }
+
+        .max {
+            color: red;
+            font-size: max(3vw, 2em, 2rem, 18px);
+        }
+
+        .min {
+            color: gold;
+            font-size: max(3vw, 2em, 2rem, 18px);
+        }
+
+
+        #container {
+            display: grid;
+            grid-template-columns: minmax(max-content, 300px) minmax(200px, 1fr) 150px;
+            grid-gap: 5px;
+            box-sizing: border-box;
+            height: 200px;
+            width: 100%;
+            background-color: #8cffa0;
+            padding: 10px;
+        }
+
+        #container>div {
+            background-color: #8ca0ff;
+            padding: 5px;
+        }
+
+        .clamp {
+            color: blue;
+            font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Max()函数使用示例</h3>
+
+        <p class="max">Max()函数实现设置字体最大大小</p>
+    </div>
+
+    <div class="container">
+        <h3>Min()函数使用示例</h3>
+
+        <p class="min">Min()函数实现设置字体最小大小</p>
+    </div>
+
+
+    <h3>minmax()函数使用示例</h3>
+    <div id="container">
+
+        <div>
+            与内容一样宽,<br />
+            但是最多300px
+        </div>
+        <div>
+            最少200px,占有其他空余空间宽度
+        </div>
+        <div>
+           固定150px宽度
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>clamp()函数使用示例</h3>
+        <p class="clamp">clamp()函数实现设置字体大小，不会小于设置的最小值，也不会超过设置的最大值</p>
+    </div>
+
+</body>
+
+</html>
