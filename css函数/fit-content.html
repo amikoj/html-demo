@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fit-content函数实现内容自适应示例</title>
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
+            grid-gap: 5px;
+            box-sizing: border-box;
+            height: 200px;
+            width: 100%;
+            background-color: #8cffa0;
+            padding: 10px;
+        }
+
+        #container>div {
+            background-color: #8ca0ff;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>与内容等宽.</div>
+        <div>
+            根据给定内容，当内容小于300px，则宽度与内容等宽，当内容大于300px，则宽度为300px.
+        </div>
+        <div>弹性宽度</div>
+    </div>
+
+</body>
+
+</html>
