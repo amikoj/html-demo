@@ -12,6 +12,7 @@
 - [max_min()函数](css函数/max_min.html)
 - [repeat()函数](css函数/repeat.html)
 - [url()函数](css函数/url.html)
+- [maxtrix()函数](css函数/matrix.html)
 
 
 ### 插件学习
