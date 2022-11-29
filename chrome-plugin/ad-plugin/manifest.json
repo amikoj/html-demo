@@ -1,0 +1,12 @@
+{
+    "name": "广告过滤",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "过滤常见网页广告信息",
+    "action":{
+      "default_popup":"template/popup.html"
+    },
+    "icons":{
+      "128":"icons/icon.png"
+    }
+  }
