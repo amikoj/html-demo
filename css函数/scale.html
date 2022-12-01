@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS matrix函数使用</title>
+    <style>
+        body {
+            color: white;
+        }
+
+        h3 {
+            color: black;
+        }
+
+        .container .scale>div>div {
+            display: inline-block;
+            padding: 30px;
+            background-color: aqua;
+            /* color: white; */
+        }
+
+        .container .scale>div>.result {
+            transform: scale(.8, 2);
+            background-color: red;
+        }
+
+        .container .scale3d {
+            margin-top: 80px;
+        }
+
+        .container .scale3d>div>div {
+            display: inline-block;
+            padding: 30px;
+            background-color: aqua;
+        }
+
+        .container .scale3d>div>.result {
+            transform: perspective(300px) scale3d(2, 0.8, 0.4) translateZ(100px);
+            transform-origin: left;
+            background-color: red;
+            margin-left: 60px;
+        }
+
+
+        .container .scalex>div>div {
+            display: inline-block;
+            padding: 30px;
+            background-color: aqua;
+        }
+        .container .scalex>div>.result {
+            background-color: red;
+            transform: scaleX(1.6);
+            transform-origin:left ;
+        }
+
+
+        .container .scaley>div>div {
+            display: inline-block;
+            padding: 30px;
+            background-color: aqua;
+        }
+        .container .scaley>div>.result {
+            background-color: red;
+            transform: scaleY(1.6);
+            transform-origin:left ;
+        }
+
+        .container .scalez {
+            padding: 40px 0;
+        }
+
+        .container .scalez>div>div {
+            display: inline-block;
+            padding: 30px;
+            background-color: aqua;
+        }
+        .container .scalez>div>.result {
+            background-color: red;
+            transform: perspective(400px) scaleZ(2) translateZ(-100px);
+            transform-origin:left ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="scale">
+            <h3>scale函数使用</h3>
+            <div>
+                <div class="original ">original container</div>
+                <div class="result">scale(0.8,2) container</div>
+            </div>
+
+        </div>
+
+        <div class="scale3d">
+            <h3>scale3d函数使用</h3>
+            <div>
+                <div class="original "> Original Text</div>
+                <div class="result">scale3d Text</div>
+            </div>
+        </div>
+
+        <div class="scalex">
+            <h3>scalex函数使用</h3>
+            <div>
+                <div class="original "> Original Text</div>
+                <div class="result">scalex Text</div>
+            </div>
+        </div>
+
+        <div class="scaley">
+            <h3>scaley函数使用</h3>
+            <div>
+                <div class="original "> Original Text</div>
+                <div class="result">scaley Text</div>
+            </div>
+        </div>
+
+        <div class="scalez">
+            <h3>scalez函数使用</h3>
+            <div>
+                <div class="original "> Original Text</div>
+                <div class="result">scalez Text</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
