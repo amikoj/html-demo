@@ -13,6 +13,7 @@
 - [repeat()函数](css函数/repeat.html)
 - [url()函数](css函数/url.html)
 - [maxtrix()函数](css函数/matrix.html)
+- [scale函数使用](css函数/scale.html)
 
 
 ### 插件学习
