@@ -7,5 +7,7 @@
 			"path": "express"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html-demo"
+	}
 }

@@ -14,6 +14,7 @@
 - [url()函数](css函数/url.html)
 - [maxtrix()函数](css函数/matrix.html)
 - [scale函数使用](css函数/scale.html)
+- [translate函数使用示例](css函数/translate.html)
 
 
 ### 插件学习
